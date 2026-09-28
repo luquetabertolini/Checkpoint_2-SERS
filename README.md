@@ -163,4 +163,70 @@ Também foi gerado um gráfico comparando os valores reais e previstos de radia�
 
 ## Importância das variáveis
 
-A análise de impo
+A análise de importância das variáveis do Random Forest apresentou:
+
+| Variável        | Importância |
+| --------------- | ----------: |
+| `hora`          |      0.4853 |
+| `temperatura_c` |      0.2959 |
+| `umidade_pct`   |      0.1812 |
+| `nuvens_pct`    |      0.0216 |
+| `vento_kmh`     |      0.0160 |
+
+A variável `hora` apresentou a maior importância no modelo, seguida por `temperatura_c` e `umidade_pct`.
+
+Isso evidencia a relevância do horário do dia para a estimativa da radiação solar dentro dos dados utilizados.
+
+---
+
+## Por que radiação solar não é igual à energia produzida?
+
+A previsão de `radiacao_w_m2` não representa diretamente a quantidade de energia elétrica produzida por um sistema fotovoltaico.
+
+A produção de energia também depende de fatores como:
+
+* eficiência dos painéis;
+* temperatura dos painéis;
+* orientação e inclinação dos módulos;
+* sombreamento;
+* perdas em cabos e inversores;
+* características específicas do sistema;
+* degradação dos módulos ao longo do tempo.
+
+Assim, a radiação solar pode ser utilizada como um importante dado de entrada, mas uma previsão de geração fotovoltaica precisa considerar também as características e condições de operação do sistema.
+
+---
+
+## Comparações e tarefas
+
+O notebook foi organizado para apresentar as comparações solicitadas na atividade, incluindo:
+
+* comparação dos algoritmos de classificação;
+* comparação dos algoritmos de regressão;
+* métricas de avaliação;
+* visualizações dos resultados;
+* análise das variáveis utilizadas;
+* interpretação dos resultados;
+* discussão sobre a relação entre radiação solar e geração fotovoltaica.
+
+As respostas das tarefas e suas respectivas análises estão apresentadas nas células Markdown do notebook, próximas às etapas correspondentes.
+
+---
+
+## Conclusão
+
+A análise demonstra a aplicação de técnicas de Machine Learning sobre dados relacionados à energia renovável e condições meteorológicas.
+
+Na etapa de regressão, os três algoritmos apresentaram desempenhos diferentes. Os modelos Random Forest e Gradient Boosting obtiveram métricas de erro menores e valores de R² superiores aos obtidos pela Regressão Linear no conjunto de teste.
+
+A análise também mostrou a importância da variável `hora` para a estimativa da radiação solar. Entretanto, a previsão da radiação, isoladamente, não é suficiente para determinar a produção de energia de um sistema fotovoltaico, sendo necessário considerar características do sistema e suas perdas.
+
+---
+
+## Integrantes
+
+* Lucca Bertolini - RM 569552
+* Raphaello Caffettani - RM 572334
+* Diego de Oliveira Brandão - RM 569773
+* Cristhian Henrique Clementino - RM 574117
+* 
